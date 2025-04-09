@@ -1,0 +1,7 @@
+plugin.tx_t3aicore {
+    view {
+        templateRootPaths.0 = {$plugin.tx_t3aicore.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_t3aicore.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_t3aicore.view.layoutRootPath}
+    }
+}

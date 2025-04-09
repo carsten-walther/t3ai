@@ -1,0 +1,39 @@
+{
+	"name": "carsten-walther/t3ai-core",
+	"type": "typo3-cms-extension",
+	"description": "GenAI for TYPO3",
+	"homepage": "https://carstenwalther.de",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [{
+		"name": "Carsten Walther",
+		"email": "walther.carsten@web.de",
+		"role": "Developer"
+	}],
+	"support": {
+		"chat": "",
+		"docs": "",
+		"issues": "",
+		"source": ""
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"typo3/cms-core": "^13.4",
+		"theodo-group/llphant": "^0.9"
+	},
+	"extra": {
+		"typo3/cms": {
+			"Package": {
+				"partOfFactoryDefault": false
+			},
+			"extension-key": "t3ai_core"
+		}
+	},
+	"minimum-stability" : "alpha",
+	"autoload": {
+		"psr-4": {
+			"CarstenWalther\\T3aiCore\\": "Classes/"
+		}
+	}
+}

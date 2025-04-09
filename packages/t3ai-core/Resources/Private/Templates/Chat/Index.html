@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default"/>
+    <f:section name="Content">
+
+        <f:asset.css identifier="chat-{contentObjectData.uid}" href="EXT:t3ai_core/Resources/Public/Css/chat.css"/>
+        <f:asset.script identifier="chat-{contentObjectData.uid}" src="EXT:t3ai_core/Resources/Public/Js/chat.js" type="module" async="TRUE" defer="TRUE"/>
+        <f:asset.script identifier="chat-config{contentObjectData.uid}">
+            let formSelector = "#chat-form-{contentObjectData.uid}"
+            let resultSelector = "#chat-result-{contentObjectData.uid}"
+        </f:asset.script>
+
+        <f:form id="chat-form-{contentObjectData.uid}" actionUri="/t3ai-core/api" enctype="multipart/form-data">
+            <f:form.hidden name="identifier" value="{identifier}"/>
+            <fieldset>
+                <legend>Chat</legend>
+                <div>
+                    <label for="prompt">What can i do for you?</label>
+                    <f:form.textfield name="prompt"/>
+                    <f:form.submit value="Go!"/>
+                </div>
+                <div>
+                    <f:form.textarea rows="10" cols="50" id="chat-result-{contentObjectData.uid}"></f:form.textarea>
+                </div>
+            </fieldset>
+        </f:form>
+
+    </f:section>
+</html>

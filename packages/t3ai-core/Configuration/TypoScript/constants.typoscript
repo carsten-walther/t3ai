@@ -1,0 +1,7 @@
+plugin.tx_t3aicore {
+    view {
+        layoutRootPath = EXT:t3ai_core/Resources/Private/Layouts/
+        partialRootPath = EXT:t3ai_core/Resources/Private/Partials/
+        templateRootPath = EXT:t3ai_core/Resources/Private/Templates/
+    }
+}

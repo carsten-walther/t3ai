@@ -1,0 +1,18 @@
+base: 'https://typo3-ai.dev.local/'
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+rootPageId: 1
+solr_enabled_read: true
+solr_host_read: localhost
+solr_path_read: /
+solr_port_read: '8983'
+solr_scheme_read: ''
+solr_use_write_connection: false
+websiteTitle: ''

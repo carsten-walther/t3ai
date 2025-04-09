@@ -1,0 +1,9 @@
+editor:
+  config:
+    importModules:
+      - { module: '@carsten-walther/t3ai-rte/plugin', exports: [ 'Chatbot' ] }
+  externalPlugins:
+    chatbot: { route: 't3ai-rte-chatbot-modal' }
+  toolbar:
+    items:
+      - chatbot

@@ -1,0 +1,21 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>General</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.resource>
+                        <label>Resource</label>
+                        <description>Which resource would you like to use for the chat?</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <foreign_table>tx_t3aicore_domain_model_resource</foreign_table>
+                        </config>
+                    </settings.resource>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

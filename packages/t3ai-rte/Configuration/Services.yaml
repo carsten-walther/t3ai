@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  CarstenWalther\T3aiRte\:
+    resource: '../Classes/*'
+
+  CarstenWalther\T3aiRte\Controller\AjaxController:
+    public: true
+
+  CarstenWalther\T3aiRte\Controller\ChatbotController:
+    shared: false
+    public: true

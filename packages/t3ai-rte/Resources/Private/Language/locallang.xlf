@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:t3ai_rte/Resources/Private/Language/locallang.xlf" date="2024-07-11T06:46:21Z" product-name="t3ai_rte">
+        <header/>
+        <body>
+            <trans-unit id="open">
+                <source>Open Chatbot</source>
+            </trans-unit>
+            <trans-unit id="tab.title.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="tab.title.advanced">
+                <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="section.title.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="section.title.advanced">
+                <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="section.title.result">
+                <source>Result</source>
+            </trans-unit>
+            <trans-unit id="form.input.prompt">
+                <source>What should i write?</source>
+            </trans-unit>
+            <trans-unit id="form.input.resource">
+                <source>Resource</source>
+            </trans-unit>
+            <trans-unit id="form.input.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="form.input.generate">
+                <source>Generate</source>
+            </trans-unit>
+            <trans-unit id="form.input.submit">
+                <source>Use this text</source>
+            </trans-unit>
+            <trans-unit id="form.input.reset">
+                <source>Reset</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

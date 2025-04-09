@@ -1,0 +1,88 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<div class="element-browser">
+    <form action="" id="promptform">
+        <div class="hidden">
+            <f:variable name="fields" value=""/>
+            <input type="hidden" name="identifier" value="{resource.resource}" />
+            <f:if condition="{resource.configurationAsArray}">
+                <f:for each="{resource.configurationAsArray}" as="value" key="key" iteration="i">
+                    <input type="hidden" name="{key}" value="{value}" />
+                    <f:variable name="fields"><f:spaceless>
+                        <f:if condition="{i.isFirst}">
+                            <f:then>{key}</f:then>
+                            <f:else>{fields},{key}</f:else>
+                        </f:if>
+                    </f:spaceless></f:variable>
+                </f:for>
+            </f:if>
+            <input type="hidden" name="resourceFields" value="{fields},identifier" />
+        </div>
+        <div class="element-browser-nav">
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a href="#general" class="nav-link text-capitalize active" aria-controls="general" role="tab" data-bs-toggle="tab">
+                        <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:tab.title.general" />
+                    </a>
+                </li>
+                <!--
+                <li class="nav-item" role="presentation" disabled>
+                    <a href="#advanced" class="nav-link text-capitalize" aria-controls="advanced" role="tab" data-bs-toggle="tab">
+                        <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:tab.title.advanced" />
+                    </a>
+                </li>
+                -->
+            </ul>
+        </div>
+        <div class="element-browser-main">
+            <div class="element-browser-main-content">
+                <div class="element-browser-body">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="general">
+                            <h3 class="form-section-headline">
+                                <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:section.title.general" />
+                            </h3>
+                            <div class="form-group">
+                                <label for="prompt" class="form-label d-block">
+                                    <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:form.input.prompt" />
+                                </label>
+                                <textarea id="prompt" name="prompt" class="form-control" required style="resize: none;"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" id="generateText" class="btn btn-default" value="{f:translate(key: 'LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:form.input.generate')}" />
+                            </div>
+                            <h3 class="form-section-headline">
+                                <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:section.title.result" />
+                            </h3>
+                            <div class="form-group">
+                                <label for="text" class="form-label sr-only">
+                                    <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:form.input.text" />
+                                </label>
+                                <textarea id="text" name="text" rows="6" cols="40" class="form-control" readonly style="resize: none;"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="reset" id="clearInputs" class="btn btn-danger" value="{f:translate(key: 'LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:form.input.reset')}"/>
+                                <input type="submit" id="insertText" class="btn btn-success" value="{f:translate(key: 'LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:form.input.submit')}"/>
+                            </div>
+                        </div>
+                        <!--
+                        <div role="tabpanel" class="tab-pane" id="advanced">
+                            <h3 class="form-section-headline">
+                                <f:translate key="LLL:EXT:t3ai_rte/Resources/Private/Language/locallang.xlf:section.title.advanced" />
+                            </h3>
+                            <div class="form-group">
+                                ...
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</html>

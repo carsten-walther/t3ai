@@ -1,0 +1,15 @@
+#ddev-generated
+services:
+    ollama:
+        container_name: ddev-${DDEV_SITENAME}-ollama
+        image: ollama/ollama:latest
+        restart: always
+        labels:
+            com.ddev.site-name: ${DDEV_SITENAME}
+            com.ddev.approot: $DDEV_APPROOT
+        volumes:
+            - ".:/mnt/ddev_config"
+            - "ollama:/root/.ollama"
+
+volumes:
+    ollama:

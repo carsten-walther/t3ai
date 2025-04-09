@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:t3ai_core/Resources/Private/Language/locallang_db.xlf" product-name="t3ai_core">
+        <header/>
+        <body>
+            <trans-unit id="tx_t3aicore_domain_model_resource">
+                <source>Resource</source>
+            </trans-unit>
+            <trans-unit id="tx_t3aicore_domain_model_resource.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_t3aicore_domain_model_resource.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_t3aicore_domain_model_resource.resource">
+                <source>Resource</source>
+            </trans-unit>
+            <trans-unit id="tx_t3aicore_domain_model_resource.configuration">
+                <source>Configuration</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.alternative_ai_generated">
+                <source>Alternative text is AI generated</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.description_ai_generated">
+                <source>Description is AI generated</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

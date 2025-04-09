@@ -1,0 +1,29 @@
+#ddev-generated
+services:
+    open-webui:
+        container_name: ddev-${DDEV_SITENAME}-open-webui
+        hostname: ${DDEV_SITENAME}-open-webui
+        image: ghcr.io/open-webui/open-webui:main
+        restart: always
+        expose:
+            - 8080/tcp
+        ports:
+            - 8080:8080/tcp
+        labels:
+            com.ddev.site-name: ${DDEV_SITENAME}
+            com.ddev.approot: $DDEV_APPROOT
+        environment:
+            - ENV=dev
+            - OLLAMA_HOST=0.0.0.0
+            - OLLAMA_BASE_URLS=http://ollama:11434
+            - WEBUI_AUTH=False
+            - WEBUI_NAME=Open-WebUI
+            - WEBUI_URL=http://$DDEV_HOSTNAME:8080
+            - WEBUI_SECRET_KEY=t0p-s3cr3t
+        volumes:
+            - "open-webui:/app/backend/data"
+        depends_on:
+            - ollama
+
+volumes:
+    open-webui:

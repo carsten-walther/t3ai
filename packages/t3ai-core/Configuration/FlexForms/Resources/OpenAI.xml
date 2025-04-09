@@ -1,0 +1,121 @@
+<T3DataStructure>
+    <sheets>
+        <sSettings>
+            <ROOT>
+                <sheetTitle>OpenAI Settings</sheetTitle>
+                <el>
+                    <apiKey>
+                        <label>API-Key</label>
+                        <description>API-Key for this service.</description>
+                        <config>
+                            <type>input</type>
+                        </config>
+                    </apiKey>
+                    <model>
+                        <label>Model (model)</label>
+                        <description>ID of the model to use. You can use the List models API to see all of your available models, or see our Model overview for descriptions of them.</description>
+                        <config>
+                            <type>input</type>
+                        </config>
+                    </model>
+                    <!--
+                    <temperature>
+                        <label>Temperature (temperature)</label>
+                        <description>What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.</description>
+                        <config>
+                            <type>number</type>
+                            <default>1</default>
+                            <range>
+                                <lower>0</lower>
+                                <upper>2</upper>
+                            </range>
+                            <slider>
+                                <step>0.1</step>
+                            </slider>
+                        </config>
+                    </temperature>
+                    <max_tokens>
+                        <label>Maximum length (max_tokens)</label>
+                        <description>The maximum number of tokens that can be generated in the completion. The token count of your prompt plus max_tokens cannot exceed the model's context length. Example Python code for counting tokens.</description>
+                        <config>
+                            <type>number</type>
+                            <default>16</default>
+                            <range>
+                                <lower>0</lower>
+                                <upper>4096</upper>
+                            </range>
+                            <slider>
+                                <step>1</step>
+                            </slider>
+                        </config>
+                    </max_tokens>
+                    <top_p>
+                        <label>Top P (top_p)</label>
+                        <description>An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.</description>
+                        <config>
+                            <type>number</type>
+                            <format>decimal</format>
+                            <default>1.0</default>
+                            <range>
+                                <lower>0.0</lower>
+                                <upper>1.0</upper>
+                            </range>
+                            <slider>
+                                <step>0.01</step>
+                            </slider>
+                        </config>
+                    </top_p>
+                    <frequency_penalty>
+                        <label>Frequency penalty (frequency_penalty)</label>
+                        <description>Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</description>
+                        <config>
+                            <type>number</type>
+                            <format>decimal</format>
+                            <default>0.0</default>
+                            <range>
+                                <lower>-2.0</lower>
+                                <upper>2.0</upper>
+                            </range>
+                            <slider>
+                                <step>0.01</step>
+                            </slider>
+                        </config>
+                    </frequency_penalty>
+                    <presence_penalty>
+                        <label>Presence penalty (presence_penalty)</label>
+                        <description>Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.</description>
+                        <config>
+                            <type>number</type>
+                            <format>decimal</format>
+                            <default>1.0</default>
+                            <range>
+                                <lower>-2.0</lower>
+                                <upper>2.0</upper>
+                            </range>
+                            <slider>
+                                <step>0.01</step>
+                            </slider>
+                        </config>
+                    </presence_penalty>
+                    <best_of>
+                        <label>Best of (best_of)</label>
+                        <description>Generates best_of completions server-side and returns the "best" (the one with the highest log probability per token). Results cannot be streamed. When used with n, best_of controls the number of candidate completions and n specifies how many to return – best_of must be greater than n.
+                            Note: Because this parameter generates many completions, it can quickly consume your token quota. Use carefully and ensure that you have reasonable settings for max_tokens and stop.</description>
+                        <config>
+                            <type>number</type>
+                            <default>1</default>
+                            <range>
+                                <lower>1</lower>
+                                <upper>20</upper>
+                            </range>
+                            <slider>
+                                <step>1</step>
+                            </slider>
+                        </config>
+                    </best_of>
+                    -->
+                </el>
+            </ROOT>
+        </sSettings>
+    </sheets>
+</T3DataStructure>
